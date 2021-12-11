@@ -1,0 +1,31 @@
+{
+    "name": "abramovku/queuecount",
+    "description": "get queue count by channel",
+    "authors": [
+        {
+            "name": "abramovku",
+            "email": "abramovku@gmai.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "illuminate/console": "^8",
+        "illuminate/support": "^7.0|^8.0",
+        "php": "^7.2|^8"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Abram\\Queuecount\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abram\\Queuecount\\QueuecountServiceProvider"
+            ]
+        }
+    }
+}
