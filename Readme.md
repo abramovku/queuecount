@@ -1,4 +1,4 @@
-# artisan-moose
+# queuecount
 A Laravel package that adds queue:count command.
 
 ## Installation
