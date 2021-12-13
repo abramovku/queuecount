@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Abram\\Queuecount\\": "src/"
+            "Abramovku\\Queuecount\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Abram\\Queuecount\\QueuecountServiceProvider"
+                "Abramovku\\Queuecount\\QueuecountServiceProvider"
             ]
         }
     }

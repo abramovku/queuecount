@@ -1,6 +1,6 @@
 <?php
 
-namespace Abram\Queuecount;
+namespace Abramovku\Queuecount;
 
 use Abram\Queuecount\Command\QueueCountCommand;
 use Illuminate\Support\ServiceProvider;
