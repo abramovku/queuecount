@@ -3,6 +3,7 @@
 namespace Abramovku\Queuecount\Command;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Queue;
 
 class QueueCountCommand extends Command
 {
@@ -27,12 +28,15 @@ class QueueCountCommand extends Command
     public function handle()
     {
         $row = [];
+        $count = 0;
         $list = $this->resolveList();
 
         foreach ($list as $queue) {
-            $row[$queue] = Queue::size($queue);
+            $row[] = [$queue, Queue::size($queue)];
+            $count += Queue::size($queue);
         }
 
+        $this->info('There are ' . $count . ' jobs in Queue!');
         $this->table(
             ['Name', 'Jobs'],
             $row
