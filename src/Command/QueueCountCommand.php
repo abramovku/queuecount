@@ -1,6 +1,6 @@
 <?php
 
-namespace Abramovku\Queuecount\Commands;
+namespace Abramovku\Queuecount\Command;
 
 use Illuminate\Console\Command;
 

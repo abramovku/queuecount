@@ -2,7 +2,7 @@
 
 namespace Abramovku\Queuecount;
 
-use Abram\Queuecount\Command\QueueCountCommand;
+use Abramovku\Queuecount\Command\QueueCountCommand;
 use Illuminate\Support\ServiceProvider;
 
 class QueuecountServiceProvider extends ServiceProvider
