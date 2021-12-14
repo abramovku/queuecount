@@ -19,7 +19,7 @@ class QueueCountCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Return size of queue by name';
+    protected $description = "Return size of queue by name";
 
     /**
      * Execute the console command.
@@ -36,9 +36,9 @@ class QueueCountCommand extends Command
             $count += Queue::size($queue);
         }
 
-        $this->info('There are ' . $count . ' jobs in Queue!');
+        $this->info(trans_choice('queueCount::there', 0, $count));
         $this->table(
-            ['Name', 'Jobs'],
+            [trans('queueCount::name'), trans('queueCount::jobs')],
             $row
         );
     }
