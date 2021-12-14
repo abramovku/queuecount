@@ -36,9 +36,9 @@ class QueueCountCommand extends Command
             $count += Queue::size($queue);
         }
 
-        $this->info(trans_choice('queueCount::there', 0, ['value' => $count]));
+        $this->info(trans_choice('queueCount::messages.there', 0, ['value' => $count]));
         $this->table(
-            [trans('queueCount::name'), trans('queueCount::jobs')],
+            [trans('queueCount::messages.name'), trans('queueCount::messages.jobs')],
             $row
         );
     }
