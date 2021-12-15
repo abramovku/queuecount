@@ -12,15 +12,15 @@ class QueuecountServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/queueCount.php' => config_path('queueCount.php'),
-            ]);
+            ], 'queueConfig');
 
             $this->mergeConfigFrom(
-                __DIR__.'/../config/queueCount.php', 'queueCount'
+                __DIR__.'/../config/queueCount.php', 'queueCount',
             );
 
             $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/queueCount'),
-            ]);
+            ], 'queueLocale');
 
             $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'queueCount');
 
